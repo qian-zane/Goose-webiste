@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Goose Patrol executable JAR status, source download, GitHub repository and implementation report.">
+  <meta name="theme-color" content="#17382d">
+  <title>Game &amp; source | Goose Patrol</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Goose Patrol home">
+        <img src="assets/favicon.png" width="42" height="42" alt="">
+        <span><strong>Goose Patrol</strong><small>Team Nuketown</small></span>
+      </a>
+      <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#documentation">Reports</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="implementation.html" aria-current="page">Game &amp; source</a>
+      <a href="index.html#team">Team</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <header class="page-intro">
+      <a class="back-link" href="index.html#documentation"><span aria-hidden="true">←</span> Assessment documents</a>
+      <p class="eyebrow">Assessment 1</p>
+      <h1>Game &amp; source</h1>
+      <p class="lede">Download the desktop game and its matching Java and libGDX source.</p>
+      <div class="actions">
+        <a class="button solid" href="files/eng1_project-main.zip" download>Download source ZIP <span aria-hidden="true">↓</span></a>
+        <a class="button outline" href="https://github.com/kevin21421/eng1_project">Open GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="release-files-title">
+      <div class="section-heading"><h2 id="release-files-title">Release files</h2></div>
+      <div class="asset-grid">
+        <article id="jar" class="panel">
+          <h3>Executable JAR</h3>
+          <p>Built from the supplied source with the chasing goose, game assets and desktop runtime dependencies bundled.</p>
+          <a class="text-link" href="files/Goose-Patrol.jar" download>Download Goose Patrol JAR <span aria-hidden="true">↓</span></a>
+        </article>
+        <article id="impl1" class="panel">
+          <h3>Implementation report</h3>
+          <p>The report covers feature status and third-party licences.</p>
+          <a class="text-link" href="files/Impl1.pdf">Open Impl1.pdf <span aria-hidden="true">↗</span></a>
+        </article>
+        <article id="github" class="panel">
+          <h3>GitHub repository</h3>
+          <p>The team’s private repository and commit history. GitHub access requires permission.</p>
+          <a class="text-link" href="https://github.com/kevin21421/eng1_project">Open repository <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="run-development-build" aria-labelledby="run-title">
+      <div class="section-heading">
+        <h2 id="run-title">Run Goose Patrol</h2>
+        <p>Use Java 17 with a desktop display. Run the command for your operating system from the directory containing the JAR.</p>
+      </div>
+      <dl class="source-list">
+        <div><dt>Windows or Linux</dt><dd><code>java -jar Goose-Patrol.jar</code></dd></div>
+        <div><dt>macOS</dt><dd><code>java -XstartOnFirstThread -jar Goose-Patrol.jar</code></dd></div>
+      </dl>
+      <p class="reference">Press Enter to start. Use the arrow keys to move and Left Shift to run. Press F when the goose is nearby, I or J to add a potion, and 1–3 to use an inventory slot.</p>
+    </section>
+
+    <section class="section" id="source-guide" aria-labelledby="source-guide-title">
+      <div class="section-heading">
+        <h2 id="source-guide-title">Source guide</h2>
+        <p>Files in the supplied source snapshot.</p>
+      </div>
+      <dl class="source-list">
+        <div><dt><code>core/</code></dt><dd>Game logic. <code>Main</code> coordinates the game loop, <code>Input</code> handles key input and secret inputs, and <code>Player</code> and <code>Inventory</code> handle item effects and quantities. <code>Goose</code> follows the player and can be deactivated at close range.</dd></div>
+        <div><dt><code>lwjgl3/</code></dt><dd>Desktop launcher and Gradle packaging configuration.</dd></div>
+        <div><dt><code>assets/</code></dt><dd>Game textures, item sprites and character artwork, with attribution files for the player artwork.</dd></div>
+      </dl>
+      <p class="reference">See <a href="architecture.html#design-to-code">architecture and source</a> for the goose, timer and inventory comparison.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Goose Patrol</strong><p>Team Nuketown · University of York · COM00019I</p></div>
+      <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
